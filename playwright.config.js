@@ -39,17 +39,17 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] , headless: false, video: 'off'},
+      use: { ...devices['Desktop Chrome'] , video: 'off'},
     },
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] , headless: false, video: 'off'},
+      use: { ...devices['Desktop Firefox'] , video: 'off'},
     },
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] , headless: true, video: 'on'},
+      use: { ...devices['Desktop Safari'] , video: 'on'},
     },
 
     /* Test against mobile viewports. */
