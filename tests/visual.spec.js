@@ -21,11 +21,11 @@ test('Visual Snapshot - Stable Cross Browser', async ({ page }) => {
   // Intentional visual change
 await page.evaluate(() => {
     const el = document.querySelector('h3');
-    document.body.style.backgroundColor = 'red';
+    document.body.style.backgroundColor = 'white';
     if (el) {
       el.style.color = 'black';
       el.style.fontSize = '40px';
-      el.textContent = 'UI is changed!';
+      el.textContent = 'Original UI';
     }
   });
 
