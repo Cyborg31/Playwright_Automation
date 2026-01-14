@@ -22,7 +22,7 @@ test('Visual Snapshot - Stable Cross Browser', async ({ page }) => {
   await page.evaluate(() => {
     const el = document.querySelector('h3');
     if (el) {
-      el.style.color = 'blue';      
+      el.style.color = 'red'; 
       el.style.fontSize = '80px';    
       el.textContent = 'UI Test';
     }
