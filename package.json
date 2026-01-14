@@ -7,7 +7,7 @@
     "test:firefox": "npx playwright test --project=firefox",
     "test:webkit": "docker run -it --rm -e CI=true -v $(pwd):/work -v $(pwd)/test-results:/work/test-results -w /work mcr.microsoft.com/playwright:v1.57.0-jammy npx playwright test --project=webkit",
     "test:all": "npm run test:chromium && npm run test:firefox && npm run test:webkit",
-    "show-report": "npx playwright show-report"
+    "show-report": "npx playwright show-report test-results"
   },
   "keywords": [],
   "author": "",
