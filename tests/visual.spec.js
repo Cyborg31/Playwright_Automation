@@ -21,7 +21,7 @@ test('Visual Snapshot - Stable Cross Browser', async ({ page }) => {
   // Intentional visual change (to demonstrate diff)
   await page.evaluate(() => {
     const el = document.querySelector('h3');
-    el.style.color = 'blue';
+    el.style.color = 'red';
     el.textContent = 'UI Color';
   });
 
