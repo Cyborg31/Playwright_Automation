@@ -7,10 +7,10 @@ Automation framework featuring **Visual Regression Testing**, **Cross-Browser Ve
 ---
 
 ## 🌟 Features
-- **Visual Testing:** AI-powered pixel comparison for UI consistency.
+- **Visual Testing:** Pixel-by-pixel comparison for UI consistency.
 - **Cross-Browser:** Verified on Chromium, Firefox, and Safari (Webkit).
 - **Docker Ready:** Optimized for running Webkit on Linux.
-- **CI/CD:** Automated via GitHub Actions.
+- **CI/CD:** Automated via GitHub Actions with full HTML report artifacts.
 
 ---
 
