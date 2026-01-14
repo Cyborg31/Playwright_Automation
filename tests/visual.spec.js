@@ -18,15 +18,18 @@ test('Visual Snapshot - Stable Cross Browser', async ({ page }) => {
   // Small render buffer
   await page.waitForTimeout(300);
 
-  // Intentional visual change (to demonstrate diff)
+  // Intentional visual change
   await page.evaluate(() => {
     const el = document.querySelector('h3');
-    el.style.color = 'red';
-    el.textContent = 'UI Color';
+    if (el) {
+      el.style.color = 'blue';      
+      el.style.fontSize = '80px';    
+      el.textContent = 'UI Test';
+    }
   });
 
-  // Visual assertion
-  await expect(page).toHaveScreenshot('heading-baseline.png', {
+  // Visual assertion 
+  await expect(page).toHaveScreenshot('main-page.png', {
     animations: 'disabled',
     maxDiffPixelRatio: 0.05, // 5% threshold to ignore font differences between local gold image and github runner generated image
   });
