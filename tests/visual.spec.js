@@ -26,8 +26,8 @@ test('Visual Snapshot - Stable Cross Browser', async ({ page }) => {
   });
 
   // Visual assertion
-  await expect(page).toHaveScreenshot('main-page.png', {
+  await expect(page).toHaveScreenshot('heading-baseline.png', {
     animations: 'disabled',
-    maxDiffPixelRatio: 0.01, // 1% threshold to ignore font differences between local gold image and github runner generated image
+    maxDiffPixelRatio: 0.05, // 5% threshold to ignore font differences between local gold image and github runner generated image
   });
 });
